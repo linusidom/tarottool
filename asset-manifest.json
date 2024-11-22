@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.58613147.css",
-    "main.js": "/static/js/main.852ed67c.js",
-    "static/js/453.c525d7c0.chunk.js": "/static/js/453.c525d7c0.chunk.js",
-    "index.html": "/index.html",
-    "main.58613147.css.map": "/static/css/main.58613147.css.map",
-    "main.852ed67c.js.map": "/static/js/main.852ed67c.js.map",
-    "453.c525d7c0.chunk.js.map": "/static/js/453.c525d7c0.chunk.js.map"
+    "main.css": "/tarottool/static/css/main.58613147.css",
+    "main.js": "/tarottool/static/js/main.ae2fd944.js",
+    "static/js/453.c525d7c0.chunk.js": "/tarottool/static/js/453.c525d7c0.chunk.js",
+    "index.html": "/tarottool/index.html",
+    "main.58613147.css.map": "/tarottool/static/css/main.58613147.css.map",
+    "main.ae2fd944.js.map": "/tarottool/static/js/main.ae2fd944.js.map",
+    "453.c525d7c0.chunk.js.map": "/tarottool/static/js/453.c525d7c0.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.58613147.css",
-    "static/js/main.852ed67c.js"
+    "static/js/main.ae2fd944.js"
   ]
 }
