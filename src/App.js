@@ -106,20 +106,14 @@ function App() {
     const genAI = new GoogleGenerativeAI(APIKey);
     const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
     
-    // console.log(cardList);
-    let prompt = "Give me a summary of the following Tarot cards:";
+
+    let prompt = "Give me a summary of the following Tarot cards spread for Past Present Future:";
 
     for (let i = 0; i < cardList.length; i++) {
       prompt += ", " + cardList[i];
     }
 
-    console.log(prompt);
-
     const result = await model.generateContent(prompt);
-    // console.log(result.response.text());
-
-    // console.log(result)
-    // console.log(result.response.candidates[0].content.parts[0].text)
 
     let text = result.response.candidates[0].content.parts[0].text.split('**').map((val, idx) => {
       return <p key={idx}>{val}</p>
@@ -140,7 +134,6 @@ function App() {
 
   const drawCardHandler = () => {
 
-    console.log(cards)
     if(!APIKey){
       setErrorMessage('Please enter your API Key')
       return
@@ -225,10 +218,12 @@ function App() {
   return (
     <div className="body">
       <h2>Past, Present Future Spread</h2>
+
       <label htmlFor="apikey">Gemini API Key</label>
-      <input name='apikey' placeholder="Enter your Google Gemini API Key" onChange={(e) => setAPIKey(e.target.value)}/>
+      <input type='password' name='apikey' placeholder="Enter your Google Gemini API Key" onChange={(e) => setAPIKey(e.target.value)}/>
       <p id='errorMessage'>{errorMessage}</p>
-      <h6><a href="https://ai.google.dev/gemini-api/docs/api-key" target="_blank">Get your API Key Here</a></h6>
+      
+      <h6><a href="https://ai.google.dev/gemini-api/docs/api-key" target="_blank" rel="noreferrer">Get your API Key Here</a></h6>
       <div id="tarot-cards">
         {loading ? (
           <TarotCard key={'temp'} card={"back"} reversed={0} cardText={""} />

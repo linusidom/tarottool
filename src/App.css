@@ -48,7 +48,7 @@ button {
   align-items: center;
 }
 
-.tarot-description{
+.card-description{
   text-transform: capitalize;
   width: 50%;
 }
