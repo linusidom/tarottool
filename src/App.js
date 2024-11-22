@@ -228,7 +228,7 @@ function App() {
       <label htmlFor="apikey">Gemini API Key</label>
       <input name='apikey' placeholder="Enter your Google Gemini API Key" onChange={(e) => setAPIKey(e.target.value)}/>
       <p id='errorMessage'>{errorMessage}</p>
-      <h6><a href="https://ai.google.dev/gemini-api/docs/api-key">Get your API Key Here</a></h6>
+      <h6><a href="https://ai.google.dev/gemini-api/docs/api-key" target="_blank">Get your API Key Here</a></h6>
       <div id="tarot-cards">
         {loading ? (
           <TarotCard key={'temp'} card={"back"} reversed={0} cardText={""} />
