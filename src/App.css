@@ -36,7 +36,7 @@ button {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
+  align-items: start;
   width: 100%;
   min-height: 20rem;
 }
@@ -46,11 +46,13 @@ button {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 30%;
 }
 
 .card-description{
   text-transform: capitalize;
   width: 50%;
+  margin: 0 auto;
 }
 
 .interpretation {

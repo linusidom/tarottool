@@ -1,7 +1,7 @@
 export const TarotCard = ({card, reversed, cardText}) => {
     // console.log(card, reversed, cardText)
     return(
-        <div>
+        <div className="tarot-card">
             {reversed ?
                 <img src={`assets/${card}.jpg`} alt="" srcSet="" className='reversed'/>
                 :
