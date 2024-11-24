@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/tarottool/static/css/main.79ebd033.css",
-    "main.js": "/tarottool/static/js/main.285155b8.js",
-    "static/js/453.c525d7c0.chunk.js": "/tarottool/static/js/453.c525d7c0.chunk.js",
-    "index.html": "/tarottool/index.html",
-    "main.79ebd033.css.map": "/tarottool/static/css/main.79ebd033.css.map",
-    "main.285155b8.js.map": "/tarottool/static/js/main.285155b8.js.map",
-    "453.c525d7c0.chunk.js.map": "/tarottool/static/js/453.c525d7c0.chunk.js.map"
+    "main.css": "./static/css/main.af896dce.css",
+    "main.js": "./static/js/main.e0df4686.js",
+    "static/js/453.c525d7c0.chunk.js": "./static/js/453.c525d7c0.chunk.js",
+    "index.html": "./index.html",
+    "main.af896dce.css.map": "./static/css/main.af896dce.css.map",
+    "main.e0df4686.js.map": "./static/js/main.e0df4686.js.map",
+    "453.c525d7c0.chunk.js.map": "./static/js/453.c525d7c0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.79ebd033.css",
-    "static/js/main.285155b8.js"
+    "static/css/main.af896dce.css",
+    "static/js/main.e0df4686.js"
   ]
 }
