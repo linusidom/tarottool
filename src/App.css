@@ -41,6 +41,14 @@ button {
   min-height: 20rem;
 }
 
+.intentionInput {
+  width: 50%;
+  padding: 1rem;
+  border-radius: 10px;
+  border: 1px solid grey;
+  margin: 1rem;
+}
+
 .tarot-card{
   display: flex;
   flex-direction: column;

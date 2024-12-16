@@ -20,6 +20,9 @@ function App() {
 
   const [errorMessage, setErrorMessage] = useState("");
 
+  const [intention, setIntention] = useState('')
+  const [selectedSpread, setSelectedSpread] = useState('pastPresentFuture')
+
   useEffect(() => {
     buildDeck();
     shuffleDeck(deck);
@@ -106,8 +109,7 @@ function App() {
       const genAI = new GoogleGenerativeAI(APIKey);
       const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
-      let prompt =
-        "Give me a summary of the following Tarot cards spread for Past Present Future:";
+      let prompt = `Give 3-5 sentence reading of the cards for ${selectedSpread} based on the question ${intention}`
 
       for (let i = 0; i < cardList.length; i++) {
         prompt += ", " + cardList[i];
@@ -153,11 +155,12 @@ function App() {
     for (let i = 0; i < data.length; i++) {
       if (data[i].Shorthand === tempCard) {
         longform = data[i].Longform;
-        if (tempReversed) {
+        if (!tempReversed) {
+          tempCardText = data[i].Upright;
+          
+        } else {
           tempCardText = data[i].Reversal;
           longform = longform + " - reversed";
-        } else {
-          tempCardText = data[i].Upright;
         }
 
         setLoading(false);
@@ -207,6 +210,8 @@ function App() {
     setInterpretation("");
     setInterpretationClicked(false);
     setInterpretationLoading(false);
+    setSelectedSpread('')
+    setIntention('')
 
     drawCardHandler();
   };
@@ -247,6 +252,19 @@ function App() {
           Get your API Key Here
         </a>
       </h6>
+      
+      <select
+        value={selectedSpread}
+        defaultValue="pastPresentFuture"
+        onChange={e => setSelectedSpread(e.target.value)}>
+      <option value="pastPresentFuture">Past, Present, Future</option>
+      <option value="relationships">Relationships</option>
+      <option value="career">Career</option>
+      </select>
+      <br/>
+      <input className='intentionInput' placeholder="What do you want to know?" onChange={(e) => setIntention(e.target.value)}/>
+      <br/>
+      <br/>
       <div id="tarot-cards">
         {loading ? (
           <TarotCard key={"temp"} card={"back"} reversed={0} cardText={""} />
